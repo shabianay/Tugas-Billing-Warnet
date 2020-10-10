@@ -1,0 +1,69 @@
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+using namespace std;
+
+int sisa, Total_Mulai, Total_Selesai, jam_mulai, menit_mulai, detik_mulai, jam_selesai, menit_selesai, detik_selesai, total_jam_pemakaian, total_menit_pemakaian, total_detik_pemakaian, durasi, total_pembayaran;
+	main() 
+  		{
+  	char nama [20];
+  	char nomer_komputer [20];
+  	char password [20];
+  	system ("color FA");
+	cout<<"---------------------------------";
+	cout<<"\n	SELAMAT DATANG	";
+	cout<<"\n	DI NANTUY-SANTUY_NET ";
+	cout<<"\n---------------------------------\n";
+
+		cout<< "Masukan Nama Anda: ";cin>>nama;
+		cout<< "Password (dari admin) : ";cin>>password;
+		cout<< "Nomer Komputer : ";cin>>nomer_komputer;
+		
+	printf("\n \n");
+		printf("Checkin\n");
+	cout<<"--------------------------\n";
+			printf(	"Jam Mulai	:	");
+				scanf("	%i",&jam_mulai);
+			printf(	"Menit Mulai	:	");
+				scanf("	%i",&menit_mulai);
+			printf(	"Detik Mulai	:	");
+				scanf("	%i",&detik_mulai);
+		Total_Mulai=(jam_mulai*3600)+(menit_mulai*60)+detik_mulai;
+		printf ("\n \n");	
+		printf("Checkout\n");
+	cout<<"--------------------------\n";
+			printf(	"Jam Selesai	:	");
+				scanf("		%i",&jam_selesai);
+			printf(	"Menit Selesai	:	");
+				scanf("		%i",&menit_selesai);
+			printf(	"Detik Selesai	:	");
+				scanf("		%i",&detik_selesai);
+		Total_Selesai=(jam_selesai*3600)+(menit_selesai*60)+detik_selesai;
+			durasi=Total_Selesai-Total_Mulai;
+		printf ("\n \n");		
+		
+		total_pembayaran=durasi*5000/3600;
+			total_jam_pemakaian=durasi/3600;
+			sisa=durasi%3600;
+			total_menit_pemakaian=sisa/60;
+			total_detik_pemakaian=sisa%60;
+		
+		printf(	"Durasi Waktu	:	\n");
+			printf("	%i Jam\n", total_jam_pemakaian);
+			printf("	%i Menit\n", total_menit_pemakaian);
+			printf("	%i Detik\n", total_detik_pemakaian);
+		printf ("\n \n");
+		
+		printf("Tarif	=	Rp.5000,- /Jam");
+		printf ("\n \n");
+			printf ("Total Biaya	=" );
+			printf("	Rp. %i,", total_pembayaran);
+		printf ("\n \n \n \n");
+	cout<<"---------------------------------";
+	cout<<"\n	TERIMA KASIH	";
+	cout<<"\n	By. Admin	";
+	cout<<"\n---------------------------------\n";
+				
+		getch();
+		
+	}
